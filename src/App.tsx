@@ -1,14 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 function App() {
   return (
     <div className="App">
-        <p
-        >
-      MAASIVO
-        </p>
+      <p>MAASIVO</p>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
