@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import '@styles/index.scss'
 import { router } from './routes'
 import { RouterProvider } from 'react-router-dom'
+import '../node_modules/MaaSIVO-UI/dist/style.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
