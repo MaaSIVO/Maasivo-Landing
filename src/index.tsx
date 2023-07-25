@@ -10,7 +10,7 @@ import { appRoutes } from '@pages/data/routes'
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
-    <Layout routes={appRoutes}>
+    <Layout routes={appRoutes} style={{ boxSizing: 'border-box' }}>
       <RouterProvider router={router} />
     </Layout>
   </React.StrictMode>,
