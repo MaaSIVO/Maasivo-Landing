@@ -18,6 +18,16 @@
         background-position: bottom 50%;
         background-image: url("../../assets/img/phoneRoad.jpg");
     }
+    &__bottomFade {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        height: 100px;
+        position: absolute;
+        z-index: 0;
+        background-image: linear-gradient(transparent, #000);
+    }
     &__darkBg {
         gap: 30px;
         display: flex;
@@ -36,6 +46,7 @@
         bottom: 0;
         width: 80%;
         margin: auto;
+        z-index: 1;
         box-sizing: border-box;
         @media only screen and (max-width: 768px) {
             width: 90%;
@@ -45,11 +56,26 @@
         }
     }
     &__videoContainer {
+        z-index: 1;
         width: 100%;
         height: max-content;
     }
     &__iframe {
         width: 100%;
         height: 500px;
+    }
+    &__features {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 50px;
+        padding: 5%;
+        @media only screen and (max-width: 768px) {
+            gap: 20px;
+        }
+        @media only screen and (max-width: 576px) {
+            padding: 3% 5% 10% 5%;
+            flex-direction: column;
+        }
     }
 }

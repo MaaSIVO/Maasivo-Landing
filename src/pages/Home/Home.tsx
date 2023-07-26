@@ -1,13 +1,21 @@
-import { SectionHeader, ThemedCard, Typo } from 'MaaSIVO-UI'
 import React from 'react'
+import {
+  FeatureCard,
+  IconOptions,
+  SectionHeader,
+  ThemedCard,
+  Typo,
+} from 'MaaSIVO-UI'
 import styles from './Home.module.scss'
 import { YoutubeCap } from 'assets/img'
+import { features, principalText } from '@pages/data/home'
 
 export const Home = () => {
   return (
     <div className={styles.container}>
       <div className={styles.container__bannerImg}>
         <div className={styles.container__darkBg}>
+          <div className={styles.container__bottomFade} />
           <SectionHeader
             className={styles.container__sectHeader}
             align="right"
@@ -18,12 +26,17 @@ export const Home = () => {
           </ThemedCard>
           <ThemedCard bordered className={styles.container__imgDescription}>
             <Typo variant="content" style={{ textAlign: 'center' }}>
-              Desarrollamos productos innovadores con impacto positivo en la
-              sociedad, solucionando necesidades de seguridad, calidad y tiempos
-              de espera.
+              {principalText}
             </Typo>
           </ThemedCard>
         </div>
+      </div>
+      <div className={styles.container__features}>
+        {features.map((f) => (
+          <FeatureCard key={f.icon} shadow={false} icon={f.icon as IconOptions}>
+            <Typo>{f.content}</Typo>
+          </FeatureCard>
+        ))}
       </div>
     </div>
   )
