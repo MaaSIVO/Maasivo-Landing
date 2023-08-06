@@ -1,0 +1,124 @@
+@import "../../styles/index.scss";
+.triangle {
+    z-index: 0;
+    width: 50em;
+    height: 42em;
+    overflow: hidden;
+    position: relative;
+
+    &__imgContainer {
+        width: 100%;
+        height: 100%;
+        left: -0.25em;
+        overflow: hidden;
+        position: absolute;
+        // arctan(27 / 40) = 34.01935deg
+        //  need to skew by 90deg - 34.01935deg = 55.98065deg
+        transform-origin: 100% 0;
+        transform: skewX(-50.98deg);
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        transform-origin: inherit;
+        transform: skewX(50.98deg);
+        background-position: bottom;
+        background-image: url("../../assets/img/sunset_traffic.jpg");
+    }
+}
+
+.triangleContainer {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    transition: all 0.5s ease-in;
+    @media only screen and (max-width: 768px) {
+        opacity: 0.5;
+    }
+}
+
+.maasivo {
+    gap: 50px;
+    padding: 3% 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    @media only screen and (max-width: 576px) {
+        gap: 30px;
+    }
+    &__contentContainer {
+        gap: 20px;
+        z-index: 1;
+        padding: 20px 5%;
+        @include row;
+        align-items: center;
+        @media only screen and (max-width: 576px) {
+            @include column;
+        }
+    }
+    &__content {
+        flex: 1;
+        @include column;
+        @include centered;
+    }
+    &__headerLeft {
+        width: 50%;
+        z-index: 1;
+        float: left;
+        position: relative !important;
+        @media only screen and (max-width: 576px) {
+            width: 90%;
+            align-self: center;
+        }
+    }
+    &__headerRight {
+        width: 50%;
+        z-index: 1;
+        float: right;
+        align-self: flex-end;
+        position: relative !important;
+    }
+    &__blueImg {
+        z-index: 0;
+        width: 30%;
+        right: 0 !important;
+        transform: translateY(20%);
+        position: absolute !important;
+        transition: all 0.5s;
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+            opacity: 0.4;
+            transform: translateY(-2%);
+        }
+    }
+    &__section {
+        gap: 50px;
+        width: 100%;
+        display: flex;
+        padding: 0% 5%;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+    &__gradientCircle {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        top: 0;
+        margin: auto;
+        z-index: 0;
+        opacity: 0.7;
+        transform: translate(30%, 0);
+    }
+    &__valuesSection {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        @media only screen and (max-width: 576px) {
+            justify-content: flex-end;
+        }
+    }
+}

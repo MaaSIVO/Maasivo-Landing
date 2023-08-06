@@ -1,5 +1,5 @@
 export const appRoutes = [
-  { label: 'MaaSIVO', path: '' },
-  { label: 'Travit', path: '' },
-  { label: 'MaaS', path: '' },
+  { label: 'MaaSIVO', path: '/about-us' },
+  { label: 'Travit', path: '/travit' },
+  { label: 'MaaS', path: '/maas' },
 ]

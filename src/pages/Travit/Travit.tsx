@@ -1,5 +1,6 @@
 import React from 'react'
+import styles from './Travit.module.scss'
 
 export const Travit = () => {
-  return <div>TRAVIT</div>
+  return <div className={styles.travit}>TRAVIT</div>
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import {
   FeatureCard,
+  GradientCircle,
   IconOptions,
   SectionHeader,
   ThemedCard,
@@ -38,6 +39,7 @@ export const Home = () => {
           </FeatureCard>
         ))}
       </div>
+      <GradientCircle size="50%" className={styles.container__gradientCircle} />
     </div>
   )
 }
