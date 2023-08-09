@@ -7,14 +7,11 @@ import {
   TeamCarousel,
   ThemedCard,
   Typo,
-  useWindowSize,
 } from 'MaaSIVO-UI'
-import { mission, teamMemberData, vision } from '@pages/data/maasivo'
-import { values } from '@pages/data/home'
+import { mission, teamMemberData, vision } from 'data/maasivo'
+import { values } from 'data/home'
 
 export const MaaSIVO = () => {
-  const { width } = useWindowSize()
-  const isMobile = width <= 768
   return (
     <div className={styles.maasivo}>
       <div className={styles.triangleContainer}>
@@ -24,11 +21,13 @@ export const MaaSIVO = () => {
           </div>
         </div>
       </div>
-      <SectionHeader
-        align="right"
-        title="¿Quiénes somos?"
-        className={styles.maasivo__headerRight}
-      />
+      <div className={styles.maasivo__headerDivRight}>
+        <SectionHeader
+          align="right"
+          title="¿Quiénes somos?"
+          className={styles.maasivo__headerRight}
+        />
+      </div>
       <div className={styles.maasivo__section}>
         <TeamCarousel items={teamMemberData} />
       </div>
@@ -46,7 +45,7 @@ export const MaaSIVO = () => {
           </ThemedCard>
         </div>
       </div>
-      <div className={styles.maasivo__valuesSection}>
+      <div className={styles.maasivo__headerDiv}>
         <SectionHeader
           align="left"
           title="Valores"

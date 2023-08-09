@@ -58,6 +58,25 @@ const perks = [
       'No depender tanto del coche particular, y así, al hacer uso tanto del transporte publico como privado, ayudar a disminuir la contaminación y mejorar la calidad de vida.',
   },
 ]
+
+const leftCardFeatures = [
+  'Información sobre modos de transporte de micro movilid(patines eléctricos, bicicletas, etc.) para el “primer y últokilómetro”.',
+  `Información sobre modos de transporte urbano cómo el autobús de
+  tránsito rápido, metro, tren, o autobuses eléctricos de cero
+  emisiones.`,
+  `Información sobre modos de transporte urbano cómo el autobús de
+  tránsito rápido, metro, tren, o autobuses eléctricos de cero
+  emisiones.`,
+  `    Un solo método seguro de pago para transporte público y medios
+  alternativos de micro movilidad.`,
+]
+
+const rightCardFeatures = [
+  'Monitoreo de ruta de principio a fin.',
+  `Una matriz sobre patrones de transporte urbanos que puede ser
+usada para analizar necesidades masivas de movilidad a nivel de
+diseño de política pública.`,
+]
 export {
   title,
   intro,
@@ -73,4 +92,6 @@ export {
   function2,
   difference,
   perks,
+  leftCardFeatures,
+  rightCardFeatures,
 }

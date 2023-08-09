@@ -26,15 +26,28 @@ import {
   function2,
   difference,
   perks,
-} from '@pages/data/maas'
+  leftCardFeatures,
+  rightCardFeatures,
+} from 'data/maas'
 
 export const MaaS = () => {
   const { width } = useWindowSize()
   const isMobile = width <= 576
 
+  const getCircleCardSize = () => {
+    if (width > 991) {
+      return 200
+    } else if (width > 576 && width <= 991) {
+      return 150
+    }
+    return 100
+  }
+
   return (
     <div className={styles.maas}>
-      <Typo variant="title">{title}</Typo>
+      <div style={{ padding: '0 50px' }}>
+        <Typo variant="title">{title}</Typo>
+      </div>
       <div className={styles.maas__bannerImg}>
         <div className={styles.maas__bannerTop} />
         <div className={styles.maas__bannerBottom} />
@@ -80,17 +93,17 @@ export const MaaS = () => {
           </ThemedCard>
           <Typo variant="title">{sub3}</Typo>
           <div className={styles.maas__rowIcons}>
-            <RoundedCard size={isMobile ? 100 : 200} icon={iconSet1[0]} />
+            <RoundedCard size={getCircleCardSize()} icon={iconSet1[0]} />
             <div className={styles.maas__columnArrows}>
               <BlueDotArrow width={50} />
               <BlueDotArrow width={50} className={styles.maas__leftArrow} />
             </div>
-            <RoundedCard size={isMobile ? 100 : 200} icon={iconSet1[1]} />
+            <RoundedCard size={getCircleCardSize()} icon={iconSet1[1]} />
           </div>
           <WhiteCard align="center">{function1}</WhiteCard>
           <div className={styles.maas__rowIcons}>
             {iconSet2.map((i) => (
-              <RoundedCard key={i.name} size={isMobile ? 100 : 200} icon={i} />
+              <RoundedCard key={i.name} size={getCircleCardSize()} icon={i} />
             ))}
           </div>
           <WhiteCard align="center">{function2}</WhiteCard>
@@ -124,7 +137,9 @@ export const MaaS = () => {
         >
           {perks.map((i) => (
             <div className={styles.maas__columnItem} key={i.title}>
-              <WhiteCard align="center">{i.title}</WhiteCard>
+              <WhiteCard align="center" className={styles.maas__columnTitle}>
+                {i.title}
+              </WhiteCard>
               <ThemedCard
                 align="center"
                 style={{ flex: 1 }}
@@ -147,62 +162,30 @@ export const MaaS = () => {
             className={styles.maas__mockPhone}
           />
           <div style={{ flex: 1 }}>
-            <IndicatorFeature
-              position="left"
-              contentWidth="80%"
-              className={styles.maas__featureLeft}
-            >
-              <Typo>
-                Información sobre modos de transporte de micro movilidad
-                (patines eléctricos, bicicletas, etc.) para el “primer y último
-                kilómetro”.
-              </Typo>
-            </IndicatorFeature>
-            <IndicatorFeature
-              position="left"
-              contentWidth="80%"
-              className={styles.maas__featureLeft}
-            >
-              <Typo>
-                Información sobre modos de transporte urbano cómo el autobús de
-                tránsito rápido, metro, tren, o autobuses eléctricos de cero
-                emisiones.
-              </Typo>
-            </IndicatorFeature>
-            <IndicatorFeature
-              position="left"
-              contentWidth="80%"
-              className={styles.maas__featureLeft}
-            >
-              <Typo>
-                Un solo método seguro de pago para transporte público y medios
-                alternativos de micro movilidad.
-              </Typo>
-            </IndicatorFeature>
+            {leftCardFeatures.map((f) => (
+              <IndicatorFeature
+                key={f.substring(0, 6)}
+                position="left"
+                contentWidth="80%"
+                className={styles.maas__featureLeft}
+              >
+                <Typo>{f}</Typo>
+              </IndicatorFeature>
+            ))}
           </div>
           <div style={{ flex: 1 }}>
-            <IndicatorFeature
-              contentWidth={isMobile ? '100%' : '80%'}
-              position={isMobile ? 'left' : 'right'}
-              className={
-                styles[isMobile ? 'maas__featureLeft' : 'maas__featureRight']
-              }
-            >
-              <Typo>Monitoreo de ruta de principio a fin.</Typo>
-            </IndicatorFeature>
-            <IndicatorFeature
-              contentWidth={isMobile ? '100%' : '80%'}
-              position={isMobile ? 'left' : 'right'}
-              className={
-                styles[isMobile ? 'maas__featureLeft' : 'maas__featureRight']
-              }
-            >
-              <Typo>
-                Una matriz sobre patrones de transporte urbanos que puede ser
-                usada para analizar necesidades masivas de movilidad a nivel de
-                diseño de política pública.
-              </Typo>
-            </IndicatorFeature>
+            {rightCardFeatures.map((f) => (
+              <IndicatorFeature
+                key={f.substring(0, 6)}
+                contentWidth={isMobile ? '100%' : '80%'}
+                position={isMobile ? 'left' : 'right'}
+                className={
+                  styles[isMobile ? 'maas__featureLeft' : 'maas__featureRight']
+                }
+              >
+                <Typo>{f}</Typo>
+              </IndicatorFeature>
+            ))}
           </div>
         </div>
       </div>

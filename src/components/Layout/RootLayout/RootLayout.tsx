@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from 'react'
 import { Layout } from 'MaaSIVO-UI'
 import { useNavigate } from 'react-router-dom'
-import { appRoutes } from '@pages/data/routes'
+import { appRoutes } from 'data/routes'
 
 export interface RootLayoutProps {
   children: ReactNode

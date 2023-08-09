@@ -42,12 +42,12 @@
 .maasivo {
     gap: 50px;
     padding: 3% 0;
-    display: flex;
+    @include column;
     position: relative;
     align-items: center;
-    flex-direction: column;
     @media only screen and (max-width: 576px) {
         gap: 30px;
+        padding: 30px 0;
     }
     &__contentContainer {
         gap: 20px;
@@ -70,24 +70,25 @@
         float: left;
         position: relative !important;
         @media only screen and (max-width: 576px) {
-            width: 90%;
-            align-self: center;
+            width: 100%;
         }
     }
     &__headerRight {
         width: 50%;
         z-index: 1;
         float: right;
-        align-self: flex-end;
         position: relative !important;
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+        }
     }
     &__blueImg {
         z-index: 0;
         width: 30%;
         right: 0 !important;
+        transition: all 0.5s;
         transform: translateY(20%);
         position: absolute !important;
-        transition: all 0.5s;
         @media only screen and (max-width: 768px) {
             width: 100%;
             opacity: 0.4;
@@ -97,28 +98,34 @@
     &__section {
         gap: 50px;
         width: 100%;
-        display: flex;
         padding: 0% 5%;
-        flex-direction: column;
+        @include column;
         box-sizing: border-box;
     }
     &__gradientCircle {
-        position: absolute;
-        bottom: 0;
-        right: 0;
         top: 0;
-        margin: auto;
+        right: 0;
+        bottom: 0;
         z-index: 0;
+        margin: auto;
         opacity: 0.7;
+        position: absolute;
         transform: translate(30%, 0);
     }
-    &__valuesSection {
+    &__headerDiv {
         width: 100%;
-        display: flex;
-        flex-direction: row;
+        @include row;
         justify-content: flex-start;
         @media only screen and (max-width: 576px) {
-            justify-content: flex-end;
+            padding: 0 5%;
+        }
+    }
+    &__headerDivRight {
+        width: 100%;
+        @include row;
+        justify-content: flex-end;
+        @media only screen and (max-width: 576px) {
+            padding: 0 5%;
         }
     }
 }

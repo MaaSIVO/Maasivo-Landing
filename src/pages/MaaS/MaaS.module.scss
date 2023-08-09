@@ -108,7 +108,7 @@
     &__differenceHeader {
         top: 0;
         transform: translateY(-50%);
-        @media only screen and (max-width: 576px) {
+        @media only screen and (max-width: 768px) {
             text-align: center;
             align-items: center;
             transform: translateY(0);
@@ -122,7 +122,7 @@
         margin-top: 60px;
         position: relative;
         padding-top: 100px;
-        @media only screen and (max-width: 576px) {
+        @media only screen and (max-width: 768px) {
             margin-top: 0;
             padding-top: 0px;
         }
@@ -137,7 +137,7 @@
         position: absolute;
         transform: translateY(30%);
         @include bg("../../assets/img/green_beige_traffic.jpg");
-        @media only screen and (max-width: 576px) {
+        @media only screen and (max-width: 768px) {
             opacity: 0.5;
         }
     }
@@ -152,6 +152,12 @@
         gap: 10px;
         @include column;
     }
+    &__columnTitle {
+        padding: 1.85rem;
+        @media only screen and (max-width: 768px) {
+            padding: 10px;
+        }
+    }
     &__perkItem {
         @include row;
         height: 100%;
@@ -164,7 +170,7 @@
         @include column;
         @include centered;
         position: relative;
-        @media only screen and (max-width: 576px) {
+        @media only screen and (max-width: 768px) {
         }
     }
     &__mockPhone {
@@ -173,7 +179,7 @@
         right: 0;
         margin: auto;
         position: absolute;
-        @media only screen and (max-width: 576px) {
+        @media only screen and (max-width: 768px) {
             position: relative;
             height: max-content;
         }
@@ -185,7 +191,7 @@
         padding: 100px 0;
         position: relative;
         align-items: center;
-        @media only screen and (max-width: 576px) {
+        @media only screen and (max-width: 768px) {
             gap: 10px;
             padding: 0;
             @include column;

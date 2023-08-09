@@ -9,7 +9,7 @@ import {
 } from 'MaaSIVO-UI'
 import styles from './Home.module.scss'
 import { YoutubeCap } from 'assets/img'
-import { features, principalText } from '@pages/data/home'
+import { features, principalText } from 'data/home'
 
 export const Home = () => {
   return (
