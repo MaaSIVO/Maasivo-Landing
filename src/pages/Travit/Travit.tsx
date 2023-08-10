@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './Travit.module.scss'
 import {
   Divider,
+  Image,
   IndicatorFeature,
   SectionHeader,
   ThemedCard,
@@ -9,15 +10,14 @@ import {
   WhiteCard,
   useWindowSize,
 } from 'MaaSIVO-UI'
-import { CheckGreen, LoginMockup, PhoneOrangeCheck } from '../../assets/icons'
-import { BusTrainImg } from '../../assets/img'
+import { CheckGreen, LoginMockup } from '../../assets/icons'
+import { PhoneTrips, ProfileMockupImg, WalletMockupImg } from '../../assets/img'
 import {
   consistsOf,
   intro,
   leftCardFeatures,
   provides,
   qualities,
-  rightCardFeatures,
 } from 'data/travit'
 
 export const Travit = () => {
@@ -79,7 +79,13 @@ export const Travit = () => {
           className={styles.travit__content}
           style={{ flexDirection: isMobile ? 'column' : 'row' }}
         >
-          <img src={BusTrainImg} className={styles.travit__busTrain} />
+          <div className={styles.travit__contentLeft}>
+            <Image
+              bordered
+              src={PhoneTrips}
+              className={styles.travit__busTrain}
+            />
+          </div>
           <div
             className={[
               styles.travit__contentLeft,
@@ -89,56 +95,107 @@ export const Travit = () => {
             {provides.features.map((f) => (
               <IndicatorFeature
                 contentWidth="100%"
-                key={f.substring(0, 10)}
-                style={{ marginLeft: isMobile ? 30 : 0 }}
+                key={f.title.substring(0, 10)}
+                style={{
+                  marginLeft: isMobile ? 30 : 0,
+                  width: isMobile ? '90%' : '100%',
+                  textAlign: 'end',
+                }}
               >
-                <WhiteCard>{f}</WhiteCard>
+                <Typo
+                  theme="themedColor"
+                  style={{ marginBottom: 10, fontWeight: 500 }}
+                >
+                  {f.title}
+                </Typo>
+                <WhiteCard>{f.description}</WhiteCard>
               </IndicatorFeature>
             ))}
           </div>
         </div>
+      </div>
+
+      <div className={styles.travit__section}>
         <ThemedCard align="center">
           <Typo>
             Travit cuenta con diversas características que ayudan a garantizar
             viajes más cómodos y más seguros para el usuario, tales como son:
           </Typo>
         </ThemedCard>
-        <div className={styles.travit__mockupRow}>
-          <PhoneOrangeCheck
-            height={isMobile ? 800 : '100%'}
-            width={isMobile ? '50%' : undefined}
-            className={styles.travit__mockPhone}
+      </div>
+      <div
+        className={[styles.travit__mockupRow, styles.travit__section].join(' ')}
+      >
+        {leftCardFeatures.map((f) => (
+          <WhiteCard align="center" key={f.title.substring(0, 6)}>
+            <Typo
+              theme="themedColor"
+              variant="subtitle"
+              style={{ marginBottom: 10 }}
+            >
+              {f.title}
+            </Typo>
+            {f.description}
+          </WhiteCard>
+        ))}
+      </div>
+      <div
+        className={[styles.travit__mockups, styles.travit__section].join(' ')}
+      >
+        <div className={styles.travit__mockup}>
+          <Typo
+            theme="themedColor"
+            variant="subtitle"
+            style={{ marginBottom: 10 }}
+          >
+            Perfil del usuario
+          </Typo>
+          <Typo style={{ textAlign: 'center', order: isMobile ? 1 : 2 }}>
+            Con la opción de tener una lista de discapacidades, esto para
+            ofrecer información de la unidad de servicio especial que le sea
+            útil al usuario, misma que contará con rampas, altavoces, guías podo
+            táctiles y personal capacitado.
+          </Typo>
+          <img
+            src={ProfileMockupImg}
+            width="50%"
+            style={{ order: isMobile ? 2 : 1 }}
           />
-          <div style={{ flex: 1 }}>
-            {leftCardFeatures.map((f) => (
-              <IndicatorFeature
-                key={f.substring(0, 6)}
-                position="left"
-                contentWidth="100%"
-                className={styles.travit__featureLeft}
-              >
-                <WhiteCard>{f}</WhiteCard>
-              </IndicatorFeature>
-            ))}
-          </div>
-          <div style={{ flex: 1 }}>
-            {rightCardFeatures.map((f) => (
-              <IndicatorFeature
-                key={f.substring(0, 6)}
-                contentWidth={isMobile ? '100%' : '80%'}
-                position={isMobile ? 'left' : 'right'}
-                className={
-                  styles[
-                    isMobile ? 'travit__featureLeft' : 'travit__featureRight'
-                  ]
-                }
-              >
-                <WhiteCard>{f}</WhiteCard>
-              </IndicatorFeature>
-            ))}
-          </div>
+        </div>
+        <div className={styles.travit__mockup}>
+          <Typo
+            theme="themedColor"
+            variant="subtitle"
+            style={{ marginBottom: 10 }}
+          >
+            “Cartera digital”
+          </Typo>
+          <Typo style={{ textAlign: 'center', order: isMobile ? 1 : 2 }}>
+            Donde se podrá consultar saldo de la cuenta y recargar el mismo
+            mediante tarjeta de crédito o débito, Paypal o pago en efectivo en
+            tiendas de autoservicio. Además de poder pagar con el celuflar
+            mediante código QR o NFC.
+          </Typo>
+          <img
+            src={WalletMockupImg}
+            width="50%"
+            style={{ order: isMobile ? 2 : 1 }}
+          />
         </div>
       </div>
     </div>
   )
 }
+
+/***
+ *  con la opción de tener una lista de
+                discapacidades, esto para ofrecer información de la unidad de
+              servicio especial que le sea útil al usuario, misma que contará
+              con rampas, altavoces, guías podo táctiles y personal capacitado.
+
+
+              , donde se podrá consultar
+              saldo de la cuenta y recargar el mismo mediante tarjeta de crédito
+              o débito, Paypal o pago en efectivo en tiendas de autoservicio.
+              Además de poder pagar con el celuflar mediante código QR o NFC.
+ */

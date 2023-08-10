@@ -22,11 +22,10 @@
         margin-top: 100px;
         position: relative;
         box-sizing: border-box;
-        // border: 1px solid red;
         @media only screen and (max-width: 576px) {
             padding: 30px 5%;
             margin-top: 0;
-            gap: 10px;
+            gap: 20px;
         }
     }
     &__bannerImg {
@@ -74,6 +73,7 @@
         }
     }
     &__transform {
+        margin-bottom: 30px;
         @media only screen and (max-width: 576px) {
             transform: translateY(100px);
             position: absolute;
@@ -93,6 +93,7 @@
         @include column;
         text-align: end;
         align-items: center;
+        justify-content: center;
         @media only screen and (max-width: 576px) {
             width: 100%;
             text-align: center;
@@ -115,12 +116,8 @@
         }
     }
     &__busTrain {
-        left: 0;
-        position: absolute;
-        width: 50%;
-        transform: translateY(30px);
+        width: 70%;
         @media only screen and (max-width: 576px) {
-            width: 100%;
             position: relative;
             margin-bottom: 30px;
         }
@@ -130,36 +127,33 @@
         gap: 20px;
     }
     &__mockPhone {
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        position: absolute;
+        height: 100%;
         @media only screen and (max-width: 768px) {
-            position: relative;
             height: max-content;
         }
     }
     &__mockupRow {
-        gap: 15%;
         width: 100%;
-        padding: 100px 0;
-        @include row;
-        position: relative;
-        align-items: center;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr;
         @media only screen and (max-width: 768px) {
-            gap: 10px;
-            padding: 0;
+            grid-template-columns: 1fr;
+        }
+    }
+    &__mockups {
+        @include row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        @media only screen and (max-width: 576px) {
             @include column;
         }
     }
-    &__featureRight {
-        text-align: right;
-        margin-right: 30px;
-    }
-    &__featureLeft {
-        text-align: left;
-        margin-left: 30px;
+    &__mockup {
+        flex: 1;
+        @include column;
+        align-items: center;
+        justify-content: center;
     }
 }
