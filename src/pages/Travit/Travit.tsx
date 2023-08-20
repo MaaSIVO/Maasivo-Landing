@@ -9,7 +9,7 @@ import {
   Typo,
   WhiteCard,
   useWindowSize,
-} from 'MaaSIVO-UI'
+} from 'maasivo-ui'
 import { CheckGreen, LoginMockup } from '../../assets/icons'
 import { PhoneTrips, ProfileMockupImg, WalletMockupImg } from '../../assets/img'
 import {

@@ -7,7 +7,7 @@ import {
   TeamCarousel,
   ThemedCard,
   Typo,
-} from 'MaaSIVO-UI'
+} from 'maasivo-ui'
 import { mission, teamMemberData, vision } from 'data/maasivo'
 import { values } from 'data/home'
 

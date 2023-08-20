@@ -6,7 +6,7 @@ import {
   SectionHeader,
   ThemedCard,
   Typo,
-} from 'MaaSIVO-UI'
+} from 'maasivo-ui'
 import styles from './Home.module.scss'
 import { YoutubeCap } from 'assets/img'
 import { features, principalText } from 'data/home'

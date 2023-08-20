@@ -1,4 +1,4 @@
-import { Anaid, Hector, Paulo, Rafa, TeamMemberProps } from 'MaaSIVO-UI'
+import { Anaid, Hector, Paulo, Rafa, TeamMemberProps } from 'maasivo-ui'
 
 const mission =
   'Implementar la Movilidad como Servicio con un enfoque innovador en la sustentabilidad, fomentando una sólida responsabilidad social que priorice el bienestar de los usuarios, los participantes del ecosistema de movilidad y el equipo MaaSIVO.'

@@ -8,7 +8,7 @@ import {
   GradientCircle,
   useWindowSize,
   IndicatorFeature,
-} from 'MaaSIVO-UI'
+} from 'maasivo-ui'
 import styles from './MaaS.module.scss'
 import { BlueDotArrow, CheckBlueGreen, PurpleMockup } from 'assets/icons'
 import {

@@ -1,4 +1,4 @@
-import { RoundedCardProps } from 'MaaSIVO-UI'
+import { RoundedCardProps } from 'maasivo-ui'
 
 export const features = [
   {

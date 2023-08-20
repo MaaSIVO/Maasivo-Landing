@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import '@styles/index.scss'
-import '../node_modules/MaaSIVO-UI/dist/style.css'
+import '../node_modules/maasivo-ui/dist/style.css'
 import { App } from 'App'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)

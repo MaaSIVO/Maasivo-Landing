@@ -10,9 +10,9 @@
     "@types/node": "^16.18.34",
     "@types/react": "^18.2.9",
     "@types/react-dom": "^18.2.4",
-    "MaaSIVO-UI": "file:.yalc/MaaSIVO-UI",
     "craco": "^0.0.3",
     "localforage": "^1.10.0",
+    "maasivo-ui": "^1.0.0",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -30,7 +30,7 @@
     "eject": "craco eject",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
-    "yalc:update": "yalc remove MaaSIVO-UI@1.0.0 &&  yalc add MaaSIVO-UI@1.0.0 && npm i"
+    "yalc:update": "yalc remove maasivo-ui@1.0.0 &&  yalc add maasivo-ui@1.0.0 && npm i"
   },
   "eslintConfig": {
     "extends": [

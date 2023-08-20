@@ -1,4 +1,4 @@
-import { IconProps } from 'MaaSIVO-UI'
+import { IconProps } from 'maasivo-ui'
 
 const title = `Todo acerca${'\n'}de:${'\n'}MaaS (Movilidad como Servicio)`
 
