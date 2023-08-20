@@ -1,0 +1,61 @@
+@mixin row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin bg($bg) {
+    background-size: cover;
+    background-image: url($bg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@mixin bannerTop($size: 100px) {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: $size;
+    position: absolute;
+    background-image: linear-gradient(black, transparent);
+}
+
+@mixin bannerBottom($size: 100px) {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: $size;
+    position: absolute;
+    background-image: linear-gradient(transparent, black);
+}
+
+@mixin bannerLeft($size: 100px) {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: $size;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(to left, transparent, black);
+}
+
+@mixin bannerRight($size: 100px) {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: $size;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(to right, transparent, black);
+}
+
+@mixin centered {
+    align-items: center;
+    justify-content: center;
+}

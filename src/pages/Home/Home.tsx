@@ -1,14 +1,15 @@
 import React from 'react'
 import {
   FeatureCard,
+  GradientCircle,
   IconOptions,
   SectionHeader,
   ThemedCard,
   Typo,
-} from 'MaaSIVO-UI'
+} from 'maasivo-ui'
 import styles from './Home.module.scss'
 import { YoutubeCap } from 'assets/img'
-import { features, principalText } from '@pages/data/home'
+import { features, principalText } from 'data/home'
 
 export const Home = () => {
   return (
@@ -38,6 +39,7 @@ export const Home = () => {
           </FeatureCard>
         ))}
       </div>
+      <GradientCircle size="50%" className={styles.container__gradientCircle} />
     </div>
   )
 }

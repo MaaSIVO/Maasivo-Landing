@@ -1,0 +1,208 @@
+@import "../../styles/index.scss";
+.maas {
+    gap: 60px;
+    z-index: 1;
+    padding: 50px 0;
+    @include column;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    @media only screen and (max-width: 576px) {
+        gap: 30px;
+    }
+    &__bannerImg {
+        width: 100%;
+        height: 500px;
+        position: relative;
+        @include bg("../../assets/img/blue_brown_phone.jpg");
+        @media only screen and (max-width: 768px) {
+            height: 40vh;
+            margin-bottom: 30px;
+        }
+    }
+    &__bannerTop {
+        @include bannerTop;
+    }
+    &__bannerBottom {
+        @include bannerBottom;
+    }
+    &__bannerHeader {
+        bottom: 0;
+        position: absolute;
+        transform: translateY(50%);
+        @media only screen and (max-width: 576px) {
+            left: 5%;
+            right: 5%;
+            margin: auto;
+            text-align: center;
+            align-items: center;
+        }
+    }
+    &__content {
+        gap: 5%;
+        padding: 5%;
+        @include column;
+        position: relative;
+    }
+    &__row {
+        gap: 5%;
+        @include row;
+        align-items: center;
+        @media only screen and (max-width: 576px) {
+            @include column;
+        }
+    }
+    &__contentLeft {
+        width: 50%;
+        height: max-content;
+        z-index: 1;
+        @media only screen and (max-width: 576px) {
+            width: 100%;
+        }
+    }
+    &__contentRight {
+        gap: 20px;
+        width: 50%;
+        @include column;
+        align-items: center;
+        @media only screen and (max-width: 576px) {
+            width: 100%;
+        }
+    }
+    &__gradientCircle {
+        left: 0;
+        bottom: 0;
+        z-index: 0;
+        position: absolute;
+        transform: translate(-30%, 0);
+    }
+    &__gradientCircleRight {
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        position: absolute;
+        transform: translate(30%, 0);
+    }
+    &__intro {
+        gap: 30px;
+        width: 100%;
+        padding: 0 5%;
+        @include column;
+        position: relative;
+    }
+    &__rowIcons {
+        gap: 5%;
+        width: 100%;
+        @include row;
+        align-items: stretch;
+        justify-content: center;
+    }
+    &__columnArrows {
+        gap: 5%;
+        @include column;
+        @include centered;
+    }
+    &__leftArrow {
+        transform: rotate(180deg);
+    }
+    &__differenceHeader {
+        top: 0;
+        transform: translateY(-50%);
+        @media only screen and (max-width: 768px) {
+            text-align: center;
+            align-items: center;
+            transform: translateY(0);
+        }
+    }
+    &__difference {
+        gap: 30px;
+        width: 100%;
+        padding: 0 5%;
+        @include column;
+        margin-top: 60px;
+        position: relative;
+        padding-top: 100px;
+        @media only screen and (max-width: 768px) {
+            margin-top: 0;
+            padding-top: 0px;
+        }
+    }
+    &__differenceBg {
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        width: 100%;
+        height: 600px;
+        position: absolute;
+        transform: translateY(30%);
+        @include bg("../../assets/img/green_beige_traffic.jpg");
+        @media only screen and (max-width: 768px) {
+            opacity: 0.5;
+        }
+    }
+    &__relative {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background: rgba($color: #000000, $alpha: 0.3);
+    }
+    &__columnItem {
+        flex: 1;
+        gap: 10px;
+        @include column;
+    }
+    &__columnTitle {
+        padding: 1.85rem;
+        @media only screen and (max-width: 768px) {
+            padding: 10px;
+        }
+    }
+    &__perkItem {
+        @include row;
+        height: 100%;
+        @include centered;
+    }
+    &__mockup {
+        gap: 30px;
+        width: 100%;
+        padding: 0 5%;
+        @include column;
+        @include centered;
+        position: relative;
+        @media only screen and (max-width: 768px) {
+        }
+    }
+    &__mockPhone {
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        @media only screen and (max-width: 768px) {
+            position: relative;
+            height: max-content;
+        }
+    }
+    &__mockupRow {
+        gap: 15%;
+        width: 100%;
+        @include row;
+        padding: 100px 0;
+        position: relative;
+        align-items: center;
+        @media only screen and (max-width: 768px) {
+            gap: 10px;
+            padding: 0;
+            @include column;
+        }
+    }
+    &__featureRight {
+        text-align: right;
+        margin-right: 30px;
+    }
+    &__featureLeft {
+        text-align: left;
+        margin-left: 30px;
+    }
+}

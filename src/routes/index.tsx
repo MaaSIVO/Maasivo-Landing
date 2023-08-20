@@ -3,9 +3,9 @@ import { Home } from '@pages/Home'
 import { MaaS } from '@pages/MaaS'
 import { MaaSIVO } from '@pages/MaaSIVO'
 import { Travit } from '@pages/Travit'
-import { createBrowserRouter } from 'react-router-dom'
+import { PathRouteProps } from 'react-router-dom'
 
-export const router = createBrowserRouter([
+export const router: PathRouteProps[] = [
   {
     path: '/',
     element: <Home />,
@@ -22,4 +22,4 @@ export const router = createBrowserRouter([
     path: '/travit',
     element: <Travit />,
   },
-])
+]
