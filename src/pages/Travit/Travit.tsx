@@ -18,7 +18,7 @@ import {
   leftCardFeatures,
   provides,
   qualities,
-} from 'data/travit'
+} from '@data/travit'
 
 export const Travit = () => {
   const { width } = useWindowSize()

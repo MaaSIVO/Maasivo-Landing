@@ -1,14 +1,10 @@
-import React, { FC, ReactNode } from 'react'
+import React from 'react'
 import { Layout } from 'maasivo-ui'
-import { useNavigate } from 'react-router-dom'
-import { appRoutes } from 'data/routes'
-import { maasivoSocialMedia } from 'data/layout'
+import { Outlet, useNavigate } from 'react-router-dom'
+import { appRoutes } from '@data/routes'
+import { maasivoSocialMedia } from '@data/layout'
 
-export interface RootLayoutProps {
-  children: ReactNode
-}
-
-export const RootLayout: FC<RootLayoutProps> = ({ children }) => {
+export const RootLayout = () => {
   const navigate = useNavigate()
   return (
     <Layout
@@ -20,7 +16,7 @@ export const RootLayout: FC<RootLayoutProps> = ({ children }) => {
       onRouteClick={(path) => navigate(path)}
       rights="© MaaSIVO 2023 | Innovación en Movimiento"
     >
-      {children}
+      <Outlet />
     </Layout>
   )
 }

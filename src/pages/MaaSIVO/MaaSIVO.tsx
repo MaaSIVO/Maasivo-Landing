@@ -8,8 +8,8 @@ import {
   ThemedCard,
   Typo,
 } from 'maasivo-ui'
-import { mission, teamMemberData, vision } from 'data/maasivo'
-import { values } from 'data/home'
+import { mission, teamMemberData, vision } from '@data/maasivo'
+import { values } from '@data/home'
 
 export const MaaSIVO = () => {
   return (

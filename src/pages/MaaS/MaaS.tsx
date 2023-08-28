@@ -10,7 +10,7 @@ import {
   IndicatorFeature,
 } from 'maasivo-ui'
 import styles from './MaaS.module.scss'
-import { BlueDotArrow, CheckBlueGreen, PurpleMockup } from 'assets/icons'
+import { BlueDotArrow, CheckBlueGreen, PurpleMockup } from '@assets/icons'
 import {
   def,
   sub1,
@@ -28,7 +28,7 @@ import {
   perks,
   leftCardFeatures,
   rightCardFeatures,
-} from 'data/maas'
+} from '@data/maas'
 
 export const MaaS = () => {
   const { width } = useWindowSize()

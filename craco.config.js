@@ -8,6 +8,8 @@ module.exports = {
       '@styles': path.resolve(__dirname, 'src/styles'),
       '@pages': path.resolve(__dirname, 'src/pages'),
       '@routes': path.resolve(__dirname, 'src/routes'),
+      '@data': path.resolve(__dirname, 'src/data'),
+      '@assets': path.resolve(__dirname, 'src/assets'),
     },
   },
 }
